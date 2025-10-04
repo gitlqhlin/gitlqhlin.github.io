@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>cloudflare搭建你的AI图片生成站,免费Flux.1文生图</title>
+      <link href="/%E7%89%A7%E7%BE%8A%E4%BA%BA/workerAIflux1%E6%96%87%E7%94%9F%E5%9B%BE/"/>
+      <url>/%E7%89%A7%E7%BE%8A%E4%BA%BA/workerAIflux1%E6%96%87%E7%94%9F%E5%9B%BE/</url>
+      
+        <content type="html"><![CDATA[<h2 id="github项目："><a href="#github项目：" class="headerlink" title="github项目："></a>github项目：</h2><p><a href="https://github.com/aigem/cf-flux-remix">https://github.com/aigem/cf-flux-remix</a></p><h2 id="cloudflare部署："><a href="#cloudflare部署：" class="headerlink" title="cloudflare部署："></a>cloudflare部署：</h2><p>1、新建一个worker<br>名称为 free-flux （与wrangler.toml文件中的名称一致，或自定义名称，在github的wrangler.toml文件中更改名称）. <strong>注意</strong>此名称必须与Github中的Wrangler.toml文件中的名称一致。</p><p><img src="https://wktc.ddkk.pp.ua/img/flux%E6%96%87%E7%94%9F%E5%9B%BE%2F1753788160170-%E5%88%9B%E5%BB%BAworkers.png"></p><p>2、worker后台设置中绑定Github仓库，绑定Fork的本仓库</p><p>3、填入构建命令等<br>构建命令（可选）： pnpm install<br>部署命令： pnpm run deploy</p><p><img src="https://wktc.ddkk.pp.ua/img/flux%E6%96%87%E7%94%9F%E5%9B%BE%2F1753788205368-%E8%BF%9E%E6%8E%A5git.png"></p><p>4、触发CF Workers中部署<br>随便改动一下仓库readme文件，提交后自动触发部署</p><p>5、部署完成<br>部署完成后打开相应网站来使用，API使用看下面的说明<br>记得在worker后台设置环境变量，替换自己的CF账号ID及API令牌<br>API令牌要有Workers AI 的读取及编辑权限。</p><h2 id="cloudflare-ID和API获取"><a href="#cloudflare-ID和API获取" class="headerlink" title="cloudflare ID和API获取"></a>cloudflare ID和API获取</h2><p>cloudflareID：</p><p><img src="https://wktc.ddkk.pp.ua/img/flux%E6%96%87%E7%94%9F%E5%9B%BE%2F1753788812878-%E8%B4%A6%E6%88%B7ID%E8%8E%B7%E5%8F%96.png"></p><p>API获取：</p><p>1.<br><img src="https://wktc.ddkk.pp.ua/img/flux%E6%96%87%E7%94%9F%E5%9B%BE%2F1753788882130-%E7%AE%A1%E7%90%86API.png"></p><p>2.<br><img src="https://wktc.ddkk.pp.ua/img/flux%E6%96%87%E7%94%9F%E5%9B%BE%2F1753788947489-%E5%88%9B%E5%BB%BA%E4%BB%A4%E7%89%8C.png"></p><p>3.<br><img src="https://wktc.ddkk.pp.ua/img/flux%E6%96%87%E7%94%9F%E5%9B%BE%2F1753789012209-workersAI%E6%A8%A1%E6%9D%BF.png"></p><p>4.<br><img src="https://wktc.ddkk.pp.ua/img/flux%E6%96%87%E7%94%9F%E5%9B%BE%2F1753789172809-%E9%80%89%E6%8B%A9%E6%89%80%E6%9C%89%E8%B4%A6%E6%88%B7.png"></p><ol start="5"><li>创建令牌，即可看到api令牌，与账户ID一起复制到<br><code>CF_ACCOUNT_LIST</code>变量中即可</li></ol><hr><p><a href="https://www.bilibili.com/video/BV1Wz2NYyEmW/?vd_source=b081dd3783684566bfe9c7b9f0a29d79">视频</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 文生图 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Cloudflare pages 搭建免费图床! 享受 Telegram 的无限空间</title>
+      <link href="/%E7%89%A7%E7%BE%8A%E4%BA%BA/tg%E5%9B%BE%E5%BA%8A/"/>
+      <url>/%E7%89%A7%E7%BE%8A%E4%BA%BA/tg%E5%9B%BE%E5%BA%8A/</url>
+      
+        <content type="html"><![CDATA[<p>由于原有的 Telegraph API 接口被官方关闭，需要将上传渠道切换至 Telegram Channel，请按照文档中的部署要求设置 <code>TG_Bot_Token</code> 和 <code>TG_Chat_ID</code>，否则将无法正常使用上传功能。</p><h2 id="如何获取-Telegram-的-Bot-Token-和-Chat-ID"><a href="#如何获取-Telegram-的-Bot-Token-和-Chat-ID" class="headerlink" title="如何获取 Telegram 的 Bot_Token 和 Chat_ID"></a>如何获取 <a href="https://www.freedidi.com/?golink=aHR0cHM6Ly90ZWxlZ3JhbS5vcmcv">Telegram</a> 的 <code>Bot_Token</code> 和 <code>Chat_ID</code></h2><p>如果您还没有 Telegram 账户，请先创建一个。接着，按照以下步骤操作以获取 <code>BOT_TOKEN</code> 和 <code>CHAT_ID</code>：</p><ol><li><strong>获取 <code>Bot_Token</code></strong><ul><li>在 Telegram 中，向 <a href="https://www.freedidi.com/?golink=aHR0cHM6Ly90Lm1lL0JvdEZhdGhlcg==">@BotFather</a> 发送命令 <code>/newbot</code>，根据提示依次输入您的机器人名称和用户名。成功创建机器人后，您将会收到一个 <code>BOT_TOKEN</code>，用于与 Telegram API 进行交互。</li></ul></li></ol><p><img src="https://www.freedidi.com/wp-content/uploads/2025/07/142849-.png" alt="202409071744569"></p><ol start="2"><li><strong>设置机器人为频道管理员</strong><ul><li>创建一个新的频道（Channel），进入该频道后，选择频道设置。将刚刚创建的机器人添加为频道管理员，这样机器人才能发送消息。</li></ul></li></ol><p><img src="https://www.freedidi.com/wp-content/uploads/2025/07/142850-.png" alt="202409071758534"></p><p><img src="https://www.freedidi.com/wp-content/uploads/2025/07/142851-.png" alt="202409071758796"></p><ol start="3"><li><p><strong>获取 <code>Chat_ID</code></strong></p><ul><li>通过 <a href="https://www.freedidi.com/?golink=aHR0cHM6Ly90Lm1lL1ZlcnNhVG9vbHNCb3Q=">@VersaToolsBot</a> 获取您的频道 ID。向该机器人发送消息，按照指示操作，最后您将得到 <code>CHAT_ID</code>（即频道的 ID）。</li><li>或者通过 <a href="https://www.freedidi.com/?golink=aHR0cHM6Ly90Lm1lL0dldFRoZWlySURCb3Q=">@GetTheirIDBot</a> 获取您的频道 ID。向该机器人发送消息，按照指示操作，最后您将得到 <code>CHAT_ID</code>（即频道的 ID）。</li></ul><p><img src="https://www.freedidi.com/wp-content/uploads/2025/07/142851-1-1.png" alt="202409071751619"></p></li></ol><p>最后去 Cloudflare Pages 后台设置相关的环境变量（注：修改环境变量后，需要重新部署才能生效）</p><table><thead><tr><th>环境变量</th><th>示例值</th><th>说明</th></tr></thead><tbody><tr><td><code>TG_Bot_Token</code></td><td><code>123468:AAxxxGKrn5</code></td><td>从 <a href="https://www.freedidi.com/?golink=aHR0cHM6Ly90Lm1lL0JvdEZhdGhlcg==">@BotFather</a> 获取的 Telegram Bot Token。</td></tr><tr><td><code>TG_Chat_ID</code></td><td><code>-1234567</code></td><td>频道的 ID，确保 TG Bot 是该频道或群组的管理员。</td></tr></tbody></table><h2 id="如何部署"><a href="#如何部署" class="headerlink" title="如何部署"></a>如何部署</h2><h3 id="提前准备"><a href="#提前准备" class="headerlink" title="提前准备"></a>提前准备</h3><p>你唯一需要提前准备的就是一个 <a href="https://www.freedidi.com/?golink=aHR0cHM6Ly93d3cuY2xvdWRmbGFyZS5jb20v">Cloudflare</a> 账户</p><h3 id="部署教程："><a href="#部署教程：" class="headerlink" title="部署教程："></a>部署教程：</h3><p>简单 3 步，即可部署本项目，拥有自己的图床</p><p>1.下载或 Fork 本仓库 (注意：目前请使用 fork) 【<a href="https://www.freedidi.com/?golink=aHR0cHM6Ly9naXRodWIuY29tL2NmLXBhZ2VzL1RlbGVncmFwaC1JbWFnZQ==">仓库链接</a>】</p><p>2.打开 Cloudflare Dashboard，进入 Pages 管理页面，选择创建项目，如果在第一步中选择的是 fork 本仓库，则选择 <code>连接到 Git 提供程序</code>，如果第一步中选择的是下载本仓库则选择 <code>直接上传</code> <img src="https://www.freedidi.com/wp-content/uploads/2025/07/130650-.png" alt="1"></p><ol start="3"><li>按照页面提示输入项目名称，选择需要连接的 Git 仓库（第一步选择的是 fork）或是上传刚刚下载的仓库文件（第一步选择的是下载本仓库），点击 <code>部署站点</code> 即可完成部署</li></ol><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p>1.无限图片储存数量，你可以上传不限数量的图片</p><p>2.无需购买服务器，托管于 Cloudflare 的网络上，当使用量不超过 Cloudflare 的免费额度时，完全免费</p><p>3.无需购买域名，可以使用 Cloudflare Pages 提供的 <code>*.pages.dev</code> 的免费二级域名，同时也支持绑定自定义域名</p><p>4.支持图片审查 API，可根据需要开启，开启后不良图片将自动屏蔽，不再加载</p><p>5.支持后台图片管理，可以对上传的图片进行在线预览，添加白名单，黑名单等操作</p><h3 id="绑定自定义域名"><a href="#绑定自定义域名" class="headerlink" title="绑定自定义域名"></a>绑定自定义域名</h3><p>在 pages 的自定义域里面，绑定 cloudflare 中存在的域名，在 cloudflare 托管的域名，自动会修改 dns 记录 <img src="https://www.freedidi.com/wp-content/uploads/2025/07/130651-.png" alt="2"></p><h3 id="限制"><a href="#限制" class="headerlink" title="限制"></a>限制</h3><p>1.由于图片文件实际存储于 Telegraph，Telegraph 限制上传的图片大小最大为 5MB</p><p>2.由于使用 Cloudflare 的网络，图片的加载速度在某些地区可能得不到保证</p><p>3.Cloudflare Function 免费版每日限制 100,000 个请求（即上传或是加载图片的总次数不能超过 100,000 次）, 正常使用已经足够！</p><hr><p>转载自<a href="https://www.freedidi.com/19912.html">零度解说</a></p><p><a href="https://www.youtube.com/watch?v=JHuISEj83ws">视频教程</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 图床 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>workers部署极简图床</title>
       <link href="/%E7%89%A7%E7%BE%8A%E4%BA%BA/workers%E9%83%A8%E7%BD%B2%E6%9E%81%E7%AE%80%E5%9B%BE%E5%BA%8A/"/>
       <url>/%E7%89%A7%E7%BE%8A%E4%BA%BA/workers%E9%83%A8%E7%BD%B2%E6%9E%81%E7%AE%80%E5%9B%BE%E5%BA%8A/</url>
