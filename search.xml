@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>wokerAI部署文生图</title>
+      <link href="/%E7%89%A7%E7%BE%8A%E4%BA%BA/wokerAI%E9%83%A8%E7%BD%B2%E6%96%87%E7%94%9F%E5%9B%BE/"/>
+      <url>/%E7%89%A7%E7%BE%8A%E4%BA%BA/wokerAI%E9%83%A8%E7%BD%B2%E6%96%87%E7%94%9F%E5%9B%BE/</url>
+      
+        <content type="html"><![CDATA[<p>github项目：<br><a href="https://github.com/git80123/cf-ai-image">https://github.com/git80123/cf-ai-image</a></p><ol><li><p>在cloudflare上创建一个workers</p></li><li><p>复制github中的<a href="https://github.com/git80123/cf-ai-image/blob/main/worker.js">worker.js</a>，到cloudflare编辑代码中</p></li><li><p>更改密码：在第75行代码的<strong>admin123</strong>更改为自己想要的密码</p></li><li><p>在cloudflare编辑代码中，添加一个新文件，复制<a href="https://github.com/git80123/cf-ai-image/blob/main/index.html">index.html</a>到cloudflare的编辑代码中</p></li><li><p>在cloudflare中的绑定选项中，添加绑定workers AI，变量名称为：<code>AI</code></p></li><li><p>绑定域名即可</p></li></ol><hr><p>使用方法：</p><ul><li>高级选项中的图像宽度和高度不要拉到2048*2048（像素太高会很慢，并且有时候会生成不出来）</li><li>引导系数最好在10以内</li><li>迭代步数选择20,（选择最高即可）</li><li>模型推荐使用第一个和第二个，剩下的用的比较少</li></ul><hr><p><a href="https://www.youtube.com/watch?v=wSdpCaWCzzo">视频</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 我的项目 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 文生图 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/%E7%89%A7%E7%BE%8A%E4%BA%BA/hello-world/"/>
       <url>/%E7%89%A7%E7%BE%8A%E4%BA%BA/hello-world/</url>
