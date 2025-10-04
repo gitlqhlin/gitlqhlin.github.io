@@ -1,3 +1,3 @@
-var posts=["牧羊人/github自动同步项目/","牧羊人/github新闻推送机器人/","牧羊人/cloudflare免费图床教程/","牧羊人/workerAIflux1文生图/","牧羊人/tg图床/","牧羊人/workers部署极简图床/","牧羊人/CF优选SaaS回源/","牧羊人/Markdown语法/","牧羊人/wokerAI部署文生图/","牧羊人/hello-world/"];function toRandomPost(){
+var posts=["牧羊人/L53域名注册教程/","牧羊人/无需服务器，GitHub-Vercel部署一个导航站/","牧羊人/无vps部署哪吒服务/","牧羊人/网易云在线音乐播放器/","牧羊人/通过github自动申请SSL证书/","牧羊人/使用爪云部署MOONTV/","牧羊人/使用vercel部署站点监测网站/","牧羊人/使用Github打包Docker镜像-在抱脸上部署青龙面板/","牧羊人/借助爪云等免费服务零成本上线动态网站/","牧羊人/谷歌Gemini本地一键部署教程/","牧羊人/订阅管理与提醒系统/","牧羊人/代理任何文件链接uniproxy/","牧羊人/部署加密聊天/","牧羊人/部署抖音无水印视频下载服务/","牧羊人/Uptime-Status网站监测项目部署/","牧羊人/Markdown语法/","牧羊人/github自动同步项目/","牧羊人/github新闻推送机器人/","牧羊人/cloudflare免费图床教程/","牧羊人/workerAIflux1文生图/","牧羊人/tg图床/","牧羊人/workers部署极简图床/","牧羊人/CF优选SaaS回源/","牧羊人/wokerAI部署文生图/","牧羊人/hello-world/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
