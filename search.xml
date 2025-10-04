@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>workers部署极简图床</title>
+      <link href="/%E7%89%A7%E7%BE%8A%E4%BA%BA/workers%E9%83%A8%E7%BD%B2%E6%9E%81%E7%AE%80%E5%9B%BE%E5%BA%8A/"/>
+      <url>/%E7%89%A7%E7%BE%8A%E4%BA%BA/workers%E9%83%A8%E7%BD%B2%E6%9E%81%E7%AE%80%E5%9B%BE%E5%BA%8A/</url>
+      
+        <content type="html"><![CDATA[<h2 id="项目地址："><a href="#项目地址：" class="headerlink" title="项目地址："></a>项目地址：</h2><p><a href="https://github.com/git80123/r2-img">https://github.com/git80123/r2-img</a></p><h2 id="部署教程："><a href="#部署教程：" class="headerlink" title="部署教程："></a>部署教程：</h2><h3 id="1-创建-Cloudflare-R2-存储桶"><a href="#1-创建-Cloudflare-R2-存储桶" class="headerlink" title="1. 创建 Cloudflare R2 存储桶"></a>1. 创建 Cloudflare R2 存储桶</h3><ol><li>进入 Cloudflare Dashboard，创建一个 R2 Bucket（如：<code>img-bed</code>）。</li></ol><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753699010949-%E5%88%9B%E5%BB%BAR2.png"></p><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753699361169-%E5%88%9B%E5%BB%BAR22.png"></p><h3 id="2-部署-Cloudflare-Worker"><a href="#2-部署-Cloudflare-Worker" class="headerlink" title="2. 部署 Cloudflare Worker"></a>2. 部署 Cloudflare Worker</h3><ol><li>新建一个 Worker 服务，拷贝本仓库的 <code>worker.js</code> 代码到 Worker 编辑器。</li></ol><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753699522658-%E5%88%9B%E5%BB%BAWK.png"></p><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753699607340-hello%20world.png"></p><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753699717430-%E9%83%A8%E7%BD%B2wk.png"></p><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753699820617-%E9%80%89%E6%8B%A9%E7%BC%96%E8%BE%91%E4%BB%A3%E7%A0%81.png"></p><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753700042586-%E5%A4%8D%E5%88%B6%E4%BB%A3%E7%A0%81.png"></p><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753700200532-%E9%83%A8%E7%BD%B2.png"></p><ol start="2"><li><p>在 Worker 的环境变量中配置以下内容：</p><ul><li><code>password</code>: 管理员登录密码（如：<code>yourpassword</code>）</li></ul><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753700294915-%E8%AE%BE%E7%BD%AE.png"></p><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753700403745-%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81.png"></p></li><li><p>绑定 R2 存储到 Worker（Workers 仪表板 → 设置 → R2 Integration）。</p><ul><li><code>r2</code>：绑定R2存储桶变量名称</li></ul><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753700590666-%E6%B7%BB%E5%8A%A0%E7%BB%91%E5%AE%9A.png"></p><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753700680812-%E6%B7%BB%E5%8A%A0R2%E7%BB%91%E5%AE%9A.png"></p><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753700828484-%E9%83%A8%E7%BD%B2R2.png"></p></li><li><p>部署并访问 Worker 域名,由于是部署workers，需要绑定自定义域名</p></li></ol><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753700910989-%E9%83%A8%E7%BD%B2R2.png"></p><h3 id="3-使用说明"><a href="#3-使用说明" class="headerlink" title="3. 使用说明"></a>3. 使用说明</h3><ul><li><strong>首次访问</strong>：进入首页，输入用户名 <code>admin</code> 和你在环境变量设置的密码登录。</li><li><strong>上传图片</strong>：选择图片文件（支持 jpg&#x2F;jpeg&#x2F;png&#x2F;webp，最大 5MB），可填写上传路径（文件夹）。</li><li><strong>上传成功</strong>：页面将显示图片预览，并可一键复制 Markdown、HTML 代码或直链。</li><li><strong>后台管理</strong>：点击“进入后台”可管理所有图片，支持按文件夹浏览、复制链接等操作。</li></ul><p><img src="https://wktc.ddkk.pp.ua/img/wk%E5%9B%BE%E5%BA%8A%2F1753701020978-%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png"></p><p><img src="https://wktc.ddkk.pp.ua/img/123%2F1753701315652-%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 图床 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CF优选SaaS回源</title>
       <link href="/%E7%89%A7%E7%BE%8A%E4%BA%BA/CF%E4%BC%98%E9%80%89SaaS%E5%9B%9E%E6%BA%90/"/>
       <url>/%E7%89%A7%E7%BE%8A%E4%BA%BA/CF%E4%BC%98%E9%80%89SaaS%E5%9B%9E%E6%BA%90/</url>
