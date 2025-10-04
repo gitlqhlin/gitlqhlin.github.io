@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>CF优选SaaS回源</title>
+      <link href="/%E7%89%A7%E7%BE%8A%E4%BA%BA/CF%E4%BC%98%E9%80%89SaaS%E5%9B%9E%E6%BA%90/"/>
+      <url>/%E7%89%A7%E7%BE%8A%E4%BA%BA/CF%E4%BC%98%E9%80%89SaaS%E5%9B%9E%E6%BA%90/</url>
+      
+        <content type="html"><![CDATA[<h2 id="准备："><a href="#准备：" class="headerlink" title="准备："></a>准备：</h2><ul><li>开通SaaS功能的cloudflare账号（需绑定信用卡）</li><li>一个托管cloudflare的域名</li><li>一个非托管cloudflare的域名，例如：saas.xxx.cn（避免冲突）</li><li>部署好一个网站：例如：<a href="http://www.xxx.com(在cloudflare上已指向该网站)/">www.xxx.com(在cloudflare上已指向该网站)</a></li></ul><h2 id="开始："><a href="#开始：" class="headerlink" title="开始："></a>开始：</h2><ol><li><p>选择一个托管在cloudflare上的域名（指向网站的域名，即<a href="http://www.xxx.com),点击ssl目录下的自定义主机名/">www.xxx.com），点击SSL目录下的自定义主机名</a></p></li><li><p>添加回源域名：<a href="http://www.xxx.com/">www.xxx.com</a><br>等待一分钟左右</p></li><li><p>添加自定义主机名：saas.xxx.cn</p></li><li><p>打开saas.xxx.cn域名网站或该域名的托管网站</p></li><li><p>添加一条CNAME记录：</p></li></ol><ul><li><p>分别复制自定义主机名的DCV委派下的名称和值，例如，名称： <strong>_acme-dfij11laifj.<hostname></strong> ，值： <strong>92afidjdk49jaf84.dav.cloudflare.com</strong></p></li><li><p>在saas.xxx.cn网站上添加CNAME记录，名称： <strong>_acme-dfij11laifj.saas</strong> (<hostname>改为saas.xxx.cn的前缀，也就是saas)；值： <strong>saas.xxx.cn.92afidjdk49jaf84.dav.cloudflare.com</strong> （在DCV上面复制的那个值的前面添加完整的域名）</p></li><li><p>再添加一条CNAME记录： <strong>saas.xxx.cn</strong> 指向： <strong><a href="http://www.xxx.com/">www.xxx.com</a></strong></p></li><li><p>可通过itdog输入saas.xxx.cn进行验证解析，多验证几次（更新cloudflare缓存）</p></li></ul><p>注意：也可以不通过DCV的名称和值进行添加CNAME记录，可以在自定义主机名中复制TXT记录，到saas.xxx.cn中添加TXT记录</p><ul><li><p>在部署网站的平台中，添加saas.xxx.cn这条CNAME记录</p></li><li><p>回到saas.xxx.cn网站，删除那条指向 <strong><a href="http://www.xxx.com/">www.xxx.com</a></strong> 的CNAME记录，并重新添加一条指向优选域名的记录，例如：优选域名为：cdn.2020111.xyz，那么名称为 <strong>saas</strong> ，指向 <strong>cdn.2020111.xyz</strong></p></li></ul><p>优选域名网站：<br><a href="https://www.wetest.vip/page/cloudflare/cname.html">CloudFlare公共优选Cname域名地址</a><br><a href="https://www.wetest.vip/page/cloudfront/cname.html">CloudFlare公共优选Cname域名地址</a></p><hr><p>转载自：<a href="https://www.kxzxs.com/archives/cf-saas-domain">科技自习室</a></p><p>视频教程：<a href="https://www.youtube.com/watch?v=Mbxq00JVmMQ&t=618s">点击前往</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 域名加速 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>wokerAI部署文生图</title>
       <link href="/%E7%89%A7%E7%BE%8A%E4%BA%BA/wokerAI%E9%83%A8%E7%BD%B2%E6%96%87%E7%94%9F%E5%9B%BE/"/>
       <url>/%E7%89%A7%E7%BE%8A%E4%BA%BA/wokerAI%E9%83%A8%E7%BD%B2%E6%96%87%E7%94%9F%E5%9B%BE/</url>
@@ -13,7 +38,7 @@
       
       <categories>
           
-          <category> 我的项目 </category>
+          <category> 教程 </category>
           
       </categories>
       
